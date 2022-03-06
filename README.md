@@ -99,8 +99,8 @@ Model performed very bad on validation dataset. Bounding box were not at all gen
 ![](experiments_1/DtectionBoxes_Precision_map_.50.png)
 ![](experiments_1/DtectionBoxes_Recall_1.png)
 ### Animated video
-Since model performance was very bad therefore animated video doesn't show any bonding boxes.
-![](https://drive.google.com/file/d/1eYKhYxtPuvDeJnh2WF2TfKXl4VoA6b4K/view?usp=sharing)
+Since model performance was very bad therefore animated video doesn't show any bonding boxes. Following is animation file url to download
+https://drive.google.com/file/d/1eYKhYxtPuvDeJnh2WF2TfKXl4VoA6b4K/view?usp=sharing
 
 
 ## Improve on the reference
