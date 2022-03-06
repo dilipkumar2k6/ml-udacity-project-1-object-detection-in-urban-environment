@@ -1,4 +1,4 @@
-# Project overview
+# Object Detection in an Urban Environment
 ## Description
 This project uses Waymo dataset and object detection algorithm from Tensorflow to detect vehicle, pedestrian and cyclist for an urban environment.
 ## Goal
