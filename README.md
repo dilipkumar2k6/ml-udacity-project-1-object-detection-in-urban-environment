@@ -89,15 +89,15 @@ python experiments/exporter_main_v2.py --input_type image_tensor --pipeline_conf
 ## Reference experiment
 #### Analyze loss
 Loss function was very stable at the later phase of training. Following are graphs for few loss.
-![](experiments/Loss-Classification Loss.png)
-![](experiments/Loss - Localization Loss.png)
-![](experiments/Loss - Normalized total loss.png)
-![](experiments/Loss - Regularization loss.png)
-![](experiments/Loss - Total loss.png)
+![]("experiments_1/Loss-Classification Loss.png")
+![]("experiments_1/Loss - Localization Loss.png")
+![]("experiments_1/Loss - Normalized total loss.png")
+![]("experiments_1/Loss - Regularization loss.png")
+![]("experiments_1/Loss - Total loss.png")
 ### Model evaluation on validation dataset
 Model performed very bad on validation dataset. Bounding box were not at all generated. Following are few graph for reference.
-![](experiments/DtectionBoxes_Precision_map_.50.png)
-![](experiments/DtectionBoxes_Recall_1.png)
+![](experiments_1/DtectionBoxes_Precision_map_.50.png)
+![](experiments_1/DtectionBoxes_Recall_1.png)
 ### Animated video
 Since model performance was very bad therefore animated video doesn't show any bonding boxes.
 ![](https://drive.google.com/file/d/1eYKhYxtPuvDeJnh2WF2TfKXl4VoA6b4K/view?usp=sharing)
