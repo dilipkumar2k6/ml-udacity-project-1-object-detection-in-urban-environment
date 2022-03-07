@@ -35,11 +35,27 @@ Following is output to render 10 images together.
 ```
   data_augmentation_options {
     random_rgb_to_gray {
-        probability: 1
+        probability: .2
+    }
+  } 
+  data_augmentation_options {
+    random_rgb_to_gray {
+    probability: 0.2
     }
   }
+  data_augmentation_options {
+    random_adjust_contrast {
+    min_delta: 0.6
+    max_delta: 1.0
+    }
+  }
+  data_augmentation_options {
+    random_adjust_brightness {
+    max_delta: 0.3
+    }
+  } 
 ```
-This produced gray file with bounding box for testing purpose.
+This produced gray/contrast/bright images with bounding box for testing purpose.
 
 ## Cross validation
 Machine learning model doesn't perform well if same training data is used to evaulate the model performance. Therefore it is a good idea to split data into following three categories.
@@ -104,4 +120,38 @@ https://drive.google.com/file/d/1eYKhYxtPuvDeJnh2WF2TfKXl4VoA6b4K/view?usp=shari
 
 
 ## Improve on the reference
-This section should highlight the different strategies you adopted to improve your model. It should contain relevant figures and details of your findings.
+To improve the model, added following augmentations
+```
+  data_augmentation_options {
+    random_rgb_to_gray {
+        probability: .2
+    }
+  } 
+  data_augmentation_options {
+    random_rgb_to_gray {
+    probability: 0.2
+    }
+  }
+  data_augmentation_options {
+    random_adjust_contrast {
+    min_delta: 0.6
+    max_delta: 1.0
+    }
+  }
+  data_augmentation_options {
+    random_adjust_brightness {
+    max_delta: 0.3
+    }
+  } 
+```
+Following is Tensorflow dashboard for training
+![](experiments_2/screenshots/train_1.png)
+![](experiments_2/screenshots/train_2.png)
+
+Following is Tensorflow dashboard for evaluation
+![](experiments_2/screenshots/val_1.png)
+
+Following is animation for this improvement
+https://drive.google.com/file/d/11iFJMSjmuqpIttK2sXbQ_G2HvG5idKsW/view?usp=sharing
+
+
