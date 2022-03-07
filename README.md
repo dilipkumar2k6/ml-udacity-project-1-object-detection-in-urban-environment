@@ -55,7 +55,8 @@ Following is output to render 10 images together.
     }
   } 
 ```
-This produced gray/contrast/bright images with bounding box for testing purpose.
+This produced gray/contrast/bright images with bounding box for testing purpose. Following is gray image example
+![](experiments_2/screenshots/aug_gray.png)
 
 ## Cross validation
 Machine learning model doesn't perform well if same training data is used to evaulate the model performance. Therefore it is a good idea to split data into following three categories.
