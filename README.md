@@ -104,8 +104,9 @@ python experiments/exporter_main_v2.py --input_type image_tensor --pipeline_conf
 python experiments/exporter_main_v2.py --input_type image_tensor --pipeline_config_path experiments/reference/pipeline_new.config --trained_checkpoint_dir experiments/reference/ --output_directory experiments/reference/exported/
 ```
 ## Reference experiment
+ssd model is overfitting therefore it doesn't perform well. To improve the performance, in next experiment will add augmentations.
 #### Analyze loss
-Loss function was very stable at the later phase of training. Following are graphs for few loss.
+Loss function was very stable at the later phase of training. Following are graphs for few loss without applying augmentation.
 ![](experiments_1/Loss-Classification-Loss.png)
 ![](experiments_1/Loss-Localization-Loss.png)
 ![](experiments_1/Loss-Normalized-total-loss.png)
@@ -145,9 +146,12 @@ To improve the model, added following augmentations
     }
   } 
 ```
-Following is Tensorflow dashboard for training
+Following is Tensorflow dashboard for training loss
 ![](experiments_2/screenshots/train_1.png)
 ![](experiments_2/screenshots/train_2.png)
+
+The loss with augmentation is lower than the previous loss (un-augmented model). This indicates better performance. We have lower down overfitting to some extent with augmentation, however better classification results would be resulting from a more balanced dataset.
+
 
 Following is Tensorflow dashboard for evaluation
 ![](experiments_2/screenshots/val_1.png)
