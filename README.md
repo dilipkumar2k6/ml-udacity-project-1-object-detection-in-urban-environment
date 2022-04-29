@@ -108,7 +108,7 @@ Note: To see Tensorflow dashboard, run following command
 ```
 python -m tensorboard.main --logdir experiments/reference/
 ```
-## Reference experiment
+## First experiment without augmentations
 ssd model is overfitting therefore it doesn't perform well. To improve the performance, in next experiment will add augmentations.
 #### Analyze loss
 Loss function was very stable at the later phase of training. Following are graphs for few loss without applying augmentation.
@@ -126,7 +126,7 @@ Since model performance was very bad therefore animated video doesn't show any b
 https://drive.google.com/file/d/1eYKhYxtPuvDeJnh2WF2TfKXl4VoA6b4K/view?usp=sharing
 
 
-## Improve on the reference
+## Second experiment with augmentations improvementation
 To improve the model, added following augmentations
 ```
   data_augmentation_options {
@@ -164,4 +164,18 @@ Following is Tensorflow dashboard for evaluation
 Following is animation for this improvement
 https://drive.google.com/file/d/11iFJMSjmuqpIttK2sXbQ_G2HvG5idKsW/view?usp=sharing
 
-
+## Third experiements with 20k steps
+As per the feedback, I ran the training for 20k steps. Following are details on output
+### Training loss
+Loss was very less after running 7k steps. Following is screenshoot for reference.
+![](experiments_3/screenshots/TrainingLoss.png)
+### Learning rate
+After running 10k steps, learning rate was very low as expected.
+![](experiments_3/screenshots/Train_Learning_Rate.png)
+### Test and Validation
+Following is screenshot for Test and validation reference.
+![](experiments_3/screenshots/DetectionBoxes_Precision.png)
+![](experiments_3/screenshots/DetectionBoxRecall.png)
+### Animation for this experiment
+Following is animation for this improvement
+https://drive.google.com/file/d/1KW8OYpZPGL-t0cXH0Fky4L9kVAy6_4yC/view?usp=sharing
