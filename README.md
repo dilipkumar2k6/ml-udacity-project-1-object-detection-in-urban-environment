@@ -103,6 +103,11 @@ python experiments/exporter_main_v2.py --input_type image_tensor --pipeline_conf
 ```
 python experiments/exporter_main_v2.py --input_type image_tensor --pipeline_config_path experiments/reference/pipeline_new.config --trained_checkpoint_dir experiments/reference/ --output_directory experiments/reference/exported/
 ```
+
+Note: To see Tensorflow dashboard, run following command
+```
+python -m tensorboard.main --logdir experiments/reference/
+```
 ## Reference experiment
 ssd model is overfitting therefore it doesn't perform well. To improve the performance, in next experiment will add augmentations.
 #### Analyze loss
